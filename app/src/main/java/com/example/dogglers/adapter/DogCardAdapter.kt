@@ -55,13 +55,11 @@ class DogCardAdapter(
         //  if the layout variable is Layout.GRID the grid list item should be used. Otherwise the
         //  the vertical/horizontal list item should be used.
 
-        val adapterLayout =
-
-        if (Layout.GRID == layout) {
-            val adapterLayout = LayoutInflater.from(parent.context)
+        var adapterLayout = if (Layout.GRID == layout) {
+            LayoutInflater.from(parent.context)
                 .inflate(R.layout.vertical_horizontal_list_item,parent, false)
         } else {
-            val adapterLayout = LayoutInflater.from(parent.context)
+            LayoutInflater.from(parent.context)
                 .inflate(R.layout.grid_list_item,parent, false)
         }
         // TODO Inflate the layout
