@@ -18,7 +18,10 @@ package com.example.dogglers.adapter
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.dogglers.R
+import com.example.dogglers.const.Layout
 import com.example.dogglers.data.DataSource
 
 /**
@@ -40,6 +43,10 @@ class DogCardAdapter(
 
     class DogCardViewHolder(view: View?): RecyclerView.ViewHolder(view!!) {
         // TODO: Declare and initialize all of the list item UI components
+        val dog_image: View = view!!.findViewById(R.id.dog_image)
+        val dog_name: TextView = view!!.findViewById(R.id.dog_name)
+        val dog_age: TextView = view!!.findViewById(R.id.dog_age)
+        val dog_hobbies: View = view!!.findViewById(R.id.dog_hobbies)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DogCardViewHolder {
@@ -47,6 +54,9 @@ class DogCardAdapter(
         //  if the layout variable is Layout.GRID the grid list item should be used. Otherwise the
         //  the vertical/horizontal list item should be used.
 
+        if (Layout.GRID == layout) {
+
+        }
         // TODO Inflate the layout
 
         // TODO: Null should not be passed into the view holder. This should be updated to reflect
