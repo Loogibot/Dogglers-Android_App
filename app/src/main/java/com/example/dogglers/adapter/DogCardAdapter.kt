@@ -55,7 +55,7 @@ class DogCardAdapter(
         //  if the layout variable is Layout.GRID the grid list item should be used. Otherwise the
         //  the vertical/horizontal list item should be used.
 
-        var adapterLayout = when (layout) {
+        val adapterLayout = when (layout) {
             Layout.HORIZONTAL -> LayoutInflater.from(parent.context)
                 .inflate(R.layout.vertical_horizontal_list_item,parent, false)
             Layout.VERTICAL -> LayoutInflater.from(parent.context)
@@ -70,10 +70,11 @@ class DogCardAdapter(
         return DogCardViewHolder(adapterLayout)
     }
 
-    override fun getItemCount(): Int = 0 // TODO: return the size of the data set instead of 0
+    override fun getItemCount(): Int = dogData.dogs.size // TODO: return the size of the data set instead of 0
 
     override fun onBindViewHolder(holder: DogCardViewHolder, position: Int) {
         // TODO: Get the data at the current position
+
         // TODO: Set the image resource for the current dog
         // TODO: Set the text for the current dog's name
         // TODO: Set the text for the current dog's age
