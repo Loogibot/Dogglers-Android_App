@@ -36,7 +36,7 @@ class DogCardAdapter(
 ): RecyclerView.Adapter<DogCardAdapter.DogCardViewHolder>() {
 
     // TODO: Initialize the data using the List found in data/DataSource
-    val dogData = DataSource
+    val dogData = DataSource.dogs
 
     /**
      * Initialize view elements
@@ -70,11 +70,11 @@ class DogCardAdapter(
         return DogCardViewHolder(adapterLayout)
     }
 
-    override fun getItemCount(): Int = dogData.dogs.size // TODO: return the size of the data set instead of 0
+    override fun getItemCount(): Int = dogData.size // TODO: return the size of the data set instead of 0
 
     override fun onBindViewHolder(holder: DogCardViewHolder, position: Int) {
         // TODO: Get the data at the current position
-        val item = dogData.dogs[position]
+        val item = dogData[position]
 
         // TODO: Set the image resource for the current dog
         val dogImage = holder.dog_image
@@ -90,5 +90,8 @@ class DogCardAdapter(
         //  R.string.dog_hobbies string constant.
         //  Passing an argument to the string resource looks like:
         //  resources?.getString(R.string.dog_hobbies, dog.hobbies)
+
+        val dogHobbies = resources?.getString(R.string.dog_hobbies)
+
     }
 }
