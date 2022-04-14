@@ -77,11 +77,13 @@ class DogCardAdapter(
         val item = dogData.dogs[position]
 
         // TODO: Set the image resource for the current dog
-        holder.dog_image
+        val dogImage = holder.dog_image
 
         // TODO: Set the text for the current dog's name
+        val dogName = holder.dog_name
 
         // TODO: Set the text for the current dog's age
+        val dogAge = holder.dog_age
 
         val resources = context?.resources
         // TODO: Set the text for the current dog's hobbies by passing the hobbies to the
