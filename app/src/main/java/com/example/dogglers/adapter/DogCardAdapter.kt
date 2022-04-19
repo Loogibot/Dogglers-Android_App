@@ -19,6 +19,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dogglers.R
@@ -44,7 +45,7 @@ class DogCardAdapter(
 
     class DogCardViewHolder(view: View?): RecyclerView.ViewHolder(view!!) {
         // TODO: Declare and initialize all of the list item UI components
-        val dogImage: View = view!!.findViewById(R.id.dog_image)
+        val dogImage: ImageView = view!!.findViewById(R.id.dog_image)
         val dogName: TextView = view!!.findViewById(R.id.dog_name)
         val dogAge: TextView = view!!.findViewById(R.id.dog_age)
         val dogHobbies: TextView = view!!.findViewById(R.id.dog_hobbies)
@@ -77,7 +78,7 @@ class DogCardAdapter(
         val item = dogData[position]
 
         // TODO: Set the image resource for the current dog
-        holder.dogImage.view = item.imageResourceId
+        holder.dogImage.setImageResource(item.imageResourceId)
 
         // TODO: Set the text for the current dog's name
         holder.dogName.text = item.name
